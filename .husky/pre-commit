@@ -1,0 +1,6 @@
+# Get the commit message
+commit_msg=$(git log -1 --pretty=%B)
+
+# Run tests and format code before committing
+pnpm run test
+pnpm run format

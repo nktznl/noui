@@ -1,0 +1,130 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    opacity 0.3s;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+
+  &.primary {
+    background-color: var(--primary-button-bg);
+    color: var(--primary-button-text);
+    border: var(--primary-button-border);
+
+    &:hover {
+      background-color: var(--primary-button-bg-hover);
+    }
+
+    &:disabled {
+      background-color: var(--primary-button-bg);
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
+    .border-top {
+      border-top: var(--primary-button-border-top);
+    }
+  }
+
+  &.secondary {
+    background-color: var(--secondary-button-bg);
+    color: var(--secondary-button-text);
+    border: var(--secondary-button-border);
+
+    &:hover {
+      background-color: var(--secondary-button-bg-hover);
+    }
+
+    &:disabled {
+      background-color: var (--secondary-button-bg);
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
+    .border-top {
+      border-top: var(--secondary-button-border-top);
+    }
+  }
+
+  &.danger {
+    background-color: var(--danger-button-bg);
+    color: var(--danger-button-text);
+    border: var(--danger-button-border);
+
+    &:hover {
+      background-color: var(--danger-button-bg-hover);
+    }
+
+    &:disabled {
+      background-color: var(--danger-button-bg);
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
+    .border-top {
+      border-top: var(--danger-button-border-top);
+    }
+  }
+
+  &.rounded {
+    border-radius: 10px;
+
+    .border-top {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  &.pill {
+    border-radius: 16px;
+
+    .border-top {
+      border-radius: 16px 16px 0 0;
+    }
+  }
+
+  .border-top {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 0 1rem;
+    height: 32px;
+  }
+
+  .icon {
+    margin-right: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .loader {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "atoms": [
+    {
+      "name": "Button",
+      "path": "lib/Button",
+      "status": "completed",
+      "tested": true
+    },
+    {
+      "name": "Badge",
+      "path": "lib/Badge",
+      "status": "completed",
+      "tested": true
+    }
+  ]
+}
